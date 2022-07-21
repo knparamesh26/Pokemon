@@ -12,7 +12,7 @@ export default class PokemonRoute extends Route {
   async model() {
     let result = [];
 
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 100; i++) {
       result[i] = await (
         await fetch(`https://pokeapi.co/api/v2/pokemon/${i + 1}/`)
       ).json();
