@@ -1,0 +1,17 @@
+<ul class="characters">
+
+    {{#each @characterArray as |value|}}
+        <div class="card-wrap">
+            <LinkTo class="image-container" @route="pokemon.character" @model={{value.id}}>
+                <div class="character" style="{{map value.types}}">
+                    <img 
+                        class="character-icon"
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{value.id}}.png" 
+                        alt="{{value.name}}"
+                    >
+                    <span class="character-name"><strong>{{capitalize value.name}}</strong></span>
+                </div>
+            </LinkTo>
+        </div>
+    {{/each}}
+</ul>

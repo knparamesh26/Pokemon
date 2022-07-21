@@ -1,0 +1,9 @@
+<div class="character-move">
+    <h2 class="sub-heading">Moves</h2>
+    <ul class="move">
+        {{!-- moves - array of object {move - object, version_group_details - object} --}}
+        {{#each @moves as |object|}}   
+            <li>{{capitalize object.move.name}}</li>
+        {{/each}}
+    </ul>
+</div>

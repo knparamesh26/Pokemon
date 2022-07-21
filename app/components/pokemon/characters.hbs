@@ -1,0 +1,6 @@
+<div class="querys">
+    <Input @value={{@search}} class="search-bar" placeholder="Search character"/>
+    <button type="button" class="sort" {{on 'click' this.args.sort}}>⇧</button>
+</div>
+
+<Pokemon::Filter @characterArray={{@result}} />

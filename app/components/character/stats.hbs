@@ -1,0 +1,22 @@
+<div class="character-stat">
+    <div class="common-profile">
+        <img class="character-icon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{@id}}.png" alt="{{@name}}">
+
+        <div class="common-info">
+            <div class="types">
+                {{#each @types as |object|}}
+                    <span class="box"><strong>{{object.type.name}}</strong></span>
+                {{/each}}
+            </div>
+
+            {{#each @stats as |object|}}
+                <li class="stats">
+                    <span class="stat"><strong>{{object.stat.name}}</strong></span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: {{object.base_stat}}px">{{object.base_stat}}%</div>
+                    </div>
+                </li>
+            {{/each}}
+        </div>
+    </div>
+</div>

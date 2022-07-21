@@ -1,0 +1,11 @@
+{{page-title "Pokemon"}}
+
+<div class="pokemon container">
+    <h1>Pokemon Character's</h1>
+
+    <Pokemon::Characters @search={{this.search}} @sort={{this.toggleProp}} @result={{this.resultArray}} />
+
+    {{!-- <span>{{this.search}}</span> --}}
+</div>
+
+{{outlet}}

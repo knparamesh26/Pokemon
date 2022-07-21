@@ -1,0 +1,29 @@
+{{page-title "Character"}}
+
+<div class="info" style="{{map @model.types}}">
+    <div class="rectangle">
+        <h1 class="heading">{{@model.name}}</h1>
+
+        <div class="scroll-content">
+            <LinkTo @route="pokemon"><img class="arrow" src="/assets/images/arrow.png" alt="arrow button"></LinkTo>
+            <Character::Stats
+                @id={{@model.id}} 
+                @name={{@model.name}}
+                @types={{@model.types}}
+                @stats={{@model.stats}}
+            />
+
+            <Character::Profile 
+                @height={{@model.height}} 
+                @weight={{@model.weight}}
+                @abilities={{@model.abilities}}
+            />
+
+            <Character::Moves 
+                @moves={{@model.moves}}
+            />
+        </div>
+    </div>
+
+</div>
+

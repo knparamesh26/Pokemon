@@ -1,0 +1,12 @@
+<h2 class="sub-heading">Profile</h2>
+<div class="profile">
+    <ul>
+        <li><strong>Height:</strong> {{this.height}} m</li>
+        <li><strong>Weight:</strong> {{this.weight}} Kg</li>
+        <li><strong>Abilities:</strong> 
+            {{#each @abilities as |ability|}}
+                {{ability.ability.name}} 
+            {{/each}}
+        </li>
+    </ul>
+</div>
